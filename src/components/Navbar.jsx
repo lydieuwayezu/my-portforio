@@ -33,7 +33,7 @@ export default function Navbar() {
       <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
         <List className="w-48 bg-slate-900 h-full">
           {links.map((l) => (
-            <ListItem button key={l} onClick={() => scrollTo(l)}>
+            <ListItem key={l} onClick={() => scrollTo(l)} sx={{ cursor: "pointer" }}>
               <ListItemText primary={l} className="text-white" />
             </ListItem>
           ))}
